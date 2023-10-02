@@ -2,6 +2,7 @@
 const studentNames = ["john", "jane", "jim", "jack", "jill"];
 const mathGrades = ["70", "85", "50", "101", "65"];
 
+// display names plus grades in database
 let namesString = "";
 let gradesString = "";
 
@@ -16,7 +17,8 @@ document.getElementById("gradesOutput").innerHTML = gradesString;
 let validCheck = false;
 let mathGradeIndex;
 
-function startApp() {
+// start check grade of student by name
+function checkGradeOfStudent() {
     // prompt the user to input a name as string
     let newName = prompt("Enter name of student:");
 
@@ -74,7 +76,7 @@ function checkValid(name) {
 }
 
 document.getElementById("startButton").addEventListener("click",function() {
-    let message = startApp();
+    let message = checkGradeOfStudent();
     document.getElementById("message").innerHTML = message;
 });
 
