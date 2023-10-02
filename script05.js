@@ -1,5 +1,5 @@
-const studentNames = ["john", "jane"];
-const mathGrades = ["70", "85"];
+const studentNames = ["john", "jane", "jim", "jack", "jill"];
+const mathGrades = ["70", "85", "50", "101", "65"];
 
 let newName = prompt("Enter name of student:");
 console.log(newName);
@@ -10,6 +10,17 @@ let validCheck = false;
 let mathGradeIndex;
 
 if (checkValid(newName)) {
+
+    if(mathGrades[mathGradeIndex] < 60) {
+        document.getElementById("message").style.color = "red";
+    } else if(mathGrades[mathGradeIndex] < 70) {
+        document.getElementById("message").style.color = "yellow";
+    } else if(mathGrades[mathGradeIndex] < 100) {
+        document.getElementById("message").style.color = "green";
+    } else {
+        document.getElementById("message").style.color = "blue";
+    }
+
     document.getElementById("message").innerHTML = `${newName} has reached ${mathGrades[mathGradeIndex]} points in Math this season.`;
 } else {
     alert("There is no " + newName + " in the database.");
