@@ -47,3 +47,49 @@ function calcTemp1() {
     }
     return message01;
 }
+
+// Intermediate ex 1 | Compare two numbers
+let gradesMartin = [76,64,81,57,94];
+let gradesThomas = [85,49,81,72,55];
+let gradesKlaus = [65,91,84,67,85];
+let gradesMaria = [93,70,81,64,84];
+let gradesDavid = [81,99,71,100,69];
+
+let sum02 = 0;
+let average02 = 0;
+let grade = "F";
+
+function getAverageGrade(array03) {
+    for(let i = 0, len = array03.length; i < len; i++) {
+        sum02 += array03[i];
+    }
+    console.log(sum02);
+    average02 = sum02 / array03.length;
+    if (average02 < 60) {
+        grade = "F";
+    } else if (average02 < 70) {
+        grade = "D";
+    } else if (average02 < 80) {
+        grade = "C";
+    } else if (average02 < 90) {
+        grade = "B";
+    } else if (average02 < 100) {
+        grade = "A";
+    }
+        
+    let result = [sum02, average02, grade];
+    return result;
+    
+}
+
+console.log(getAverageGrade(gradesMartin));
+
+
+document.getElementById("martinSum").innerHTML = getAverageGrade(gradesMartin)[0];
+document.getElementById("martinAverage").innerHTML = getAverageGrade(gradesMartin)[1];
+document.getElementById("martinGrade").innerHTML = getAverageGrade(gradesMartin)[2];
+
+// document.getElementById("thomas").innerHTML = getAverageGrade(gradesThomas);
+// document.getElementById("klaus").innerHTML = getAverageGrade(gradesKlaus);
+// document.getElementById("maria").innerHTML = getAverageGrade(gradesMaria);
+// document.getElementById("david").innerHTML = getAverageGrade(gradesDavid);
