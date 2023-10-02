@@ -4,7 +4,7 @@ let mathGradeIndex;
 const studentNames = ["john", "jane", "jim", "jack", "jill"];
 const mathGrades = ["70", "85", "50", "101", "65"];
 
-// display names plus grades in database
+// display names plus grades from database
 let namesString = "";
 let gradesString = "";
 
