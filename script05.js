@@ -1,3 +1,5 @@
+let validCheck = false;
+let mathGradeIndex;
 
 const studentNames = ["john", "jane", "jim", "jack", "jill"];
 const mathGrades = ["70", "85", "50", "101", "65"];
@@ -13,9 +15,6 @@ for (let i = 0; i < studentNames.length; i++) {
 
 document.getElementById("namesOutput").innerHTML = namesString;
 document.getElementById("gradesOutput").innerHTML = gradesString;
-
-let validCheck = false;
-let mathGradeIndex;
 
 // start check grade of student by name
 function checkGradeOfStudent() {
