@@ -9,10 +9,24 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <p id="message">_</p>
-
-
-
+    <div class="container-fluid d-flex justify-content-center p-5">
+        <div class="rounded border shadow d-flex flex-column align-items-center">
+            <button class="btn btn-warning" id="startButton">- Start -</button>
+            <p class="p-2" id="message">_</p>
+        </div>
+        
+    </div>
+    
+    <div class="container-fluid d-flex justify-content-left p-5 text-secondary">
+        <div class="d-flex flex-column align-items-left p-2">
+            <div>Names in database:</div>
+            <div class="d-flex">
+                <ul id="namesOutput"></ul>
+                <ul id="gradesOutput"></ul>
+            </div>
+        </div>
+    </div>
+    
     <script src="./script05.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
