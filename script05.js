@@ -62,6 +62,7 @@ function changeFirstLetterToUppercase(name) {
             return name;
 }
 
+// check if the input name is in the database
 function checkValid(name) {
     for (let i = 0; i < studentNames.length; i++) {
         if (name === studentNames[i]) {
@@ -74,25 +75,8 @@ function checkValid(name) {
     return false;
 }
 
+// output the grade message
 document.getElementById("startButton").addEventListener("click",function() {
     let message = checkGradeOfStudent();
     document.getElementById("message").innerHTML = message;
 });
-
-// for (let i = 0; i < studentNames.length; i++) {
-//     console.log(studentNames.length);
-//     if (newName === studentNames[i]) {
-//         if(mathGrades[i] < 60) {
-//             document.getElementById("message").style.color = "red";
-//         } else if(mathGrades[i] < 70) {
-//             document.getElementById("message").style.color = "yellow";
-//         } else if(mathGrades[i] < 100) {
-//             document.getElementById("message").style.color = "green";
-//         } else {
-//             document.getElementById("message").style.color = "blue";
-//         }
-//         document.getElementById("message").innerHTML = `${studentNames[i]} has reached ${mathGrades[i]} points in Math this season.`;
-//     } else {
-//         continue;
-//     }
-// }
