@@ -2,9 +2,7 @@ const studentNames = ["john", "jane", "jim", "jack", "jill"];
 const mathGrades = ["70", "85", "50", "101", "65"];
 
 let newName = prompt("Enter name of student:");
-console.log(newName);
 newName = newName.toLowerCase();
-console.log(newName);
 
 let validCheck = false;
 let mathGradeIndex;
