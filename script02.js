@@ -5,8 +5,6 @@ let gradesKlaus = [65,91,84,67,85];
 let gradesMaria = [93,70,81,64,84];
 let gradesDavid = [81,99,71,100,69];
 
-
-
 let grade = "F";
 let classGrade = "F";
 
