@@ -14,23 +14,25 @@ function getAverageGrade(array03) {
     for(let i = 0; i < array03.length; i++) {
         sum02 += array03[i];
     };
-    // console.log(sum02);
     average02 = sum02 / array03.length;
-    if (average02 < 60) {
-        grade = "F";
-    } else if (average02 < 70) {
-        grade = "D";
-    } else if (average02 < 80) {
-        grade = "C";
-    } else if (average02 < 90) {
-        grade = "B";
-    } else if (average02 < 100) {
-        grade = "A";
-    }
-        
+    grade = checkGrade(average02);
     let result = [sum02, average02, grade];
     return result;
-    
+}
+
+function checkGrade(average) {
+    if (average < 60) {
+        grade = "F";
+    } else if (average < 70) {
+        grade = "D";
+    } else if (average < 80) {
+        grade = "C";
+    } else if (average < 90) {
+        grade = "B";
+    } else if (average < 100) {
+        grade = "A";
+    }
+    return grade;
 }
 
 function getClassAverage() {
@@ -40,33 +42,10 @@ function getClassAverage() {
     let four = getAverageGrade(gradesMaria)[1];
     let five = getAverageGrade(gradesDavid)[1];
 
-    console.log(one);
-    console.log(two);
-    console.log(three);
-    console.log(four);
-    console.log(five);
-
     let classSum = one + two + three + four + five;
-
-    console.log(classSum);
-
     let classAvg = classSum / 5;
+    classGrade = checkGrade(classAvg); 
 
-    console.log(classAvg);
-
-    if (classAvg < 60) {
-        classGrade = "F";
-    } else if (classAvg < 70) {
-        classGrade = "D";
-    } else if (classAvg < 80) {
-        classGrade = "C";
-    } else if (classAvg < 90) {
-        classGrade = "B";
-    } else if (classAvg < 100) {
-        classGrade = "A";
-    }
-
-    console.log(classGrade);
     let classResult = classGrade;
     return classResult;
 }
@@ -82,6 +61,4 @@ document.getElementById("maria").innerHTML = `Sum: ${getAverageGrade(gradesMaria
 document.getElementById("david").innerHTML = `Sum: ${getAverageGrade(gradesDavid)[0]}, Average: ${getAverageGrade(gradesDavid)[1]}, Grade: ${getAverageGrade(gradesDavid)[2]}`;
 
 let classResultGrade = getClassAverage();
-console.log(classResultGrade);
-
 document.getElementById("classAverage").innerHTML = `Grade: ${classResultGrade}`;
